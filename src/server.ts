@@ -1,5 +1,4 @@
-// Architectural pattern: MVC, DI, MVP => backend suyagi, malumotlar oqimini tartibga soladigan vositasi
+import dotenv from 'dotenv';
+dotenv.config();
 
-// MVC = Model View Controller
-
-// Design pattern: Middleware, Decorator => malum bir bolaklarini strukturasini yechishda yordam  beradigan vosita
+console.log(process.env.PORT);
