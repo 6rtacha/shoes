@@ -1,3 +1,15 @@
+/* Project Standards:
+    -Logging standards
+    -Naming standards
+        function, method, variable => Camel goHome
+        class => Pascal                     MemberService
+        folder => Kebab                     
+        css => Snake                        button_style
+    -Error handling
+  
+ */
+
+
 // I-TASK:
 
 // Shunday function yozing, u parametridagi array ichida eng kop takrorlangan raqamni topib qaytarsin.
