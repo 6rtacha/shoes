@@ -1,21 +1,46 @@
+// I-TASK:
+
+// Shunday function yozing, u parametridagi array ichida eng kop takrorlangan raqamni topib qaytarsin.
+// MASALAN: majorityElement([1,2,3,4,5,4,3,4]) return 4
+
+function majorityElement(data: number[]) {
+    let maxCount: number = 0;
+    let index: number = 0;
+    for(let i = 0; i < data.length; i++){
+        let count: number = 0;
+        for(let j = 0; j < data.length; j++){
+            if(data[i] == data[j]){
+                count++;
+            }
+        }
+        if(count > maxCount){
+            maxCount = count;
+            index = i;
+        }
+    }
+    console.log(data[index]);
+}
+
+majorityElement([1,2,3,4,5,4,3,4]);
+
 // H2-TASK: 
 
 // Shunday function tuzing, unga string argument pass bolsin. 
 // Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
 // MASALAN: getDigits("m14i1t") return qiladi "141"
 
-function getDigits(data: string) {
-    let result: string[] = [];
-    const dataArray = data.split("");
-    dataArray.filter((ele) =>{
-        if(!isNaN(+ele)) {
-            result.push(ele);
-        }
-    })
-    let finalResult: string = result.join("");
-    console.log(finalResult);
-}
-getDigits("m14i1t");
+// function getDigits(data: string) {
+//     let result: string[] = [];
+//     const dataArray = data.split("");
+//     dataArray.filter((ele) =>{
+//         if(!isNaN(+ele)) {
+//             result.push(ele);
+//         }
+//     })
+//     let finalResult: string = result.join("");
+//     console.log(finalResult);
+// }
+// getDigits("m14i1t");
 
 
 // H-TASK: 
