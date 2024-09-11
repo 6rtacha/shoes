@@ -26,12 +26,11 @@ const memberSchema = new Schema({
         required: true,
     },
 
-    memberpassword: {
+    memberPassword: {
         type: String,
         select: false,
         required: true,
     },
-
     memberAdress: {
         type: String,
     },

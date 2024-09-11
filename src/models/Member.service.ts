@@ -19,7 +19,7 @@ class MemberService {
            const result = await this.memberModel.create(input);
             // const tempResult = new this.memberModel(input);
             // const result = await tempResult.save();
-            result.memberpassword = "";
+            result.memberPassword = "";
             return result; 
         }catch(err) {
             console.log(err);
