@@ -9,6 +9,11 @@
   
  */
 
+/*
+    Traditional Api
+    Rest Api
+    GraphQL Api
+*/
 
 // I-TASK:
 
