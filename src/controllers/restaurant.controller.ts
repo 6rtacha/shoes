@@ -11,7 +11,7 @@ const restaurantController: T = {};
 restaurantController.goHome = (req: Request, res: Response) => {
     try {
         console.log("goHome");
-        res.send("Home Page");
+        res.render("home");
         //send | json | redirect | end | render
     }
     catch (err) {
@@ -19,37 +19,23 @@ restaurantController.goHome = (req: Request, res: Response) => {
     }
 };
 
-restaurantController.getLogin = (req: Request, res: Response) => {
-    try {
-        console.log("getLogin");
-        res.send("Login Page");
-    }
-    catch (err) {
-        console.log("Error, getLogin", err);
-    }
-};
-
 restaurantController.getSignup = (req: Request, res: Response) => {
     try {
         console.log("getSignup");
-        res.send("Signup Page");
+        res.render("signup");
     }
     catch (err) {
         console.log("Error, getSignup", err);
     }
 };
 
-restaurantController.processLogin = async (req: Request, res: Response) => {
+restaurantController.getLogin = (req: Request, res: Response) => {
     try {
-        console.log("processLogin");
-        console.log("body:", req.body);
-        const input: LoginInput = req.body;
-        const result = await memberService.processLogin(input)
-
-        res.send(result);
+        console.log("getLogin");
+        res.render("login");
     }
     catch (err) {
-        console.log("Error, getSignup", err);
+        console.log("Error, getLogin", err);
     }
 };
 
@@ -66,6 +52,20 @@ restaurantController.processSignup = async (req: Request, res: Response) => {
     catch (err) {
         console.log("Error, getSignup", err);
         res.send(err)
+    }
+};
+
+restaurantController.processLogin = async (req: Request, res: Response) => {
+    try {
+        console.log("processLogin");
+        console.log("body:", req.body);
+        const input: LoginInput = req.body;
+        const result = await memberService.processLogin(input)
+
+        res.send(result);
+    }
+    catch (err) {
+        console.log("Error, getSignup", err);
     }
 };
 
