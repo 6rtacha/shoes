@@ -59,6 +59,11 @@ console.log(countVowels("string"));
     GraphQL Api
 */
 
+/**
+ request join
+ self destroy
+ */
+
 // I-TASK:
 
 // Shunday function yozing, u parametridagi array ichida eng kop takrorlangan raqamni topib qaytarsin.
