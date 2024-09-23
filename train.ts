@@ -1,20 +1,40 @@
+// M-TASK: 
+
+// Shunday function yozing, u raqamlardan tashkil topgan array qabul qilsin
+//  va array ichidagi har bir raqam uchun raqamni ozi
+//  va hamda osha raqamni kvadratidan tashkil topgan object hosil qilib, 
+// hosil bolgan objectlarni array ichida qaytarsin.
+// MASALAN: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}];
+
+function getSquareNumbers(param: number[]){
+    const result = param.map((ele) => {
+        return {
+            number: ele,
+            square: ele * ele
+        }
+    });
+    console.log(result);
+}
+
+getSquareNumbers([1, 2, 3]);
+
 // L-TASK: 
 
 // Shunday function yozing, u string qabul qilsin va string ichidagi hamma sozlarni chappasiga yozib va sozlar ketma-ketligini buzmasdan stringni qaytarsin.
 // MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
 
-function reverseSentence(param: string) {
-    const arryParam = param.toLocaleLowerCase().split(" ");
-    const newParam = arryParam.map((ele) => {
-        return ele.split("").reverse().join('');
+// function reverseSentence(param: string) {
+//     const arryParam = param.toLocaleLowerCase().split(" ");
+//     const newParam = arryParam.map((ele) => {
+//         return ele.split("").reverse().join('');
         
-    });
-    const result = newParam.join(' ');
-    console.log(result);
+//     });
+//     const result = newParam.join(' ');
+//     console.log(result);
     
-}
+// }
 
-reverseSentence("we like coding!");
+// reverseSentence("we like coding!");
 
 // K-TASK: 
 
