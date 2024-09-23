@@ -71,7 +71,7 @@ reverseSentence("we like coding!");
   
  */
 
-/*
+/* Request:
     Traditional Api
     Rest Api
     GraphQL Api
@@ -81,6 +81,23 @@ reverseSentence("we like coding!");
  request join
  self destroy
  */
+
+ /** Frontend Development:
+        Traditional FD => SSR => EJS
+        Modern FD      => SPA => REACT
+  */
+
+/**Cookies:
+    request join
+    self destroy
+ */
+
+/** Validation:
+        Frontend validation
+        Backend validation
+        Database validation
+ */
+
 
 // I-TASK:
 
