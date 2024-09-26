@@ -32,7 +32,18 @@ routerAdmin.post(
     makeUploader("products").array("productImages", 5),
     productController.createNewProduct
 );
-routerAdmin.post('/product/:id', restaurantController.verifyRestaurant, productController.updateChosenProduct);
+routerAdmin.post(
+    '/product/:id', 
+    restaurantController.verifyRestaurant, 
+    productController.updateChosenProduct);
 /** User */
-routerAdmin.get("/user/all", restaurantController.verifyRestaurant, restaurantController.getUsers)
+routerAdmin.get(
+    "/user/all", 
+    restaurantController.verifyRestaurant, 
+    restaurantController.getUsers);
+routerAdmin.post(
+    "/user/edit", 
+    restaurantController.verifyRestaurant, 
+    restaurantController.updateChosenUser)
+
 export default routerAdmin;
