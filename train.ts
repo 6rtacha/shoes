@@ -4,8 +4,8 @@
 // MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
 
 function objectToArray(obj: object) {
-    let text = Object.entries(obj);
-    console.log(text);
+    let result = Object.entries(obj);
+    console.log(result);
 }
 
 objectToArray( {a: 10, b: 20});
