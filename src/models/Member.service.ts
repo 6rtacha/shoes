@@ -36,7 +36,7 @@ public async login(input: LoginInput): Promise<Member> {
         .exec();
     if(!member) throw new Errors(HttpCode. NOT_FOUND, Message.NO_MEMBER_NICK);
     else if (member.memberStatus === MemberStatus.BLOCK) {
-        throw new Errors(HttpCode.FORBIDDEN, Message.BLOCKED_USER);
+        throw new Errors(HttpCode.FORBIDDEN, Message.BLOCKED_USER)
     }
     
     const isMatch = await bcrypt.compare(
