@@ -1,3 +1,24 @@
+// R-TASK:
+
+// Shunday function yozing, u string parametrga ega bolsin. String "1+2" holatda pass qilinganda string ichidagi sonlar yigindisini number holatda qaytarsin.
+// MASALAN: calculate("1+3") return 4;
+
+function calculate(str: string){
+    const strArray = str.split("");
+    let result: number = 0;
+    const result1 = strArray.map(ele => {
+        return parseInt(ele);
+    });
+    for ( let i = 0; i < result1.length; i++){
+        if (!isNaN(result1[i])){
+            result += result1[i];
+        }
+    }
+    console.log(result);
+}
+
+calculate("1+3");
+
 // Q-TASK:
 
 // Shunday function yozing, u 2 ta parametrgga ega bolib birinchisi object, ikkinchisi string. 
@@ -5,16 +26,16 @@
 // MASALAN: hasProperty({name: "BMW", model: "M3"}, "model") return true; 
 // hasProperty({name: "BMW", model: "M3"}, "year") return false
 
-function hasProperty(obj: object, str: string): any{
-    let objArr = Object.keys(obj);
-    let result = objArr.includes(str);
-    return result;
-}
-const result1 = hasProperty({name: "BMW", model: "M3"}, "model");
-console.log(result1);
+// function hasProperty(obj: object, str: string): any{
+//     let objArr = Object.keys(obj);
+//     let result = objArr.includes(str);
+//     return result;
+// }
+// const result1 = hasProperty({name: "BMW", model: "M3"}, "model");
+// console.log(result1);
 
-const result2 = hasProperty({name: "BMW", model: "M3"}, "year");
-console.log(result2);
+// const result2 = hasProperty({name: "BMW", model: "M3"}, "year");
+// console.log(result2);
 
 
 // P-TASK:
