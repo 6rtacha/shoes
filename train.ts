@@ -1,23 +1,43 @@
+// S-TASK:
+
+// Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin
+// MASALAN: missingNumber([3, 0, 1]) return 2
+
+function missingNumber(arr: number[]){
+    const sortArr = arr.sort();
+    let missingNumber: number = 0;
+    for (let i = 0; i < sortArr.length; i++) {
+        if (sortArr[i] !== i + 1){
+            missingNumber = i + 1;
+        } 
+    }
+    return missingNumber;
+}
+const result = missingNumber([3, 0, 1]);//[0, 1, 3]
+console.log(result);
+
+
+
 // R-TASK:
 
 // Shunday function yozing, u string parametrga ega bolsin. String "1+2" holatda pass qilinganda string ichidagi sonlar yigindisini number holatda qaytarsin.
 // MASALAN: calculate("1+3") return 4;
 
-function calculate(str: string){
-    const strArray = str.split("");
-    let result: number = 0;
-    const result1 = strArray.map(ele => {
-        return parseInt(ele);
-    });
-    for ( let i = 0; i < result1.length; i++){
-        if (!isNaN(result1[i])){
-            result += result1[i];
-        }
-    }
-    console.log(result);
-}
 
-calculate("1+3");
+// function calculate(str: string){
+//     let result: number = 0;
+//     const result1 = str.split("").map(ele => {
+//         return parseInt(ele);
+//     });
+//     for ( let i = 0; i < result1.length; i++){
+//         if (!isNaN(result1[i])){
+//             result += result1[i];
+//         }
+//     }
+//     console.log(result);
+// }
+
+// calculate("1+3");
 
 // Q-TASK:
 
