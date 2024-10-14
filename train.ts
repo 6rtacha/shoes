@@ -1,18 +1,38 @@
+// V-TASK:
+
+// Shunday function yozing, uni string parametri bolsin va stringdagi harf va u harf necha marta takrorlangani sonidan tashkil topgan object qaytarsin.
+// MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
+
+function countChars(str: string) {
+  const strAr = str.split("");
+  let letterCount: any = {};
+  for (let i = 0; i < strAr.length; i++) {
+    if (letterCount[strAr[i]]) {
+      letterCount[strAr[i]]++;
+    } else {
+      letterCount[strAr[i]] = 1;
+    }
+  }
+  console.log(letterCount);
+}
+
+countChars("hello");
+
 // U-TASK:
 
 // Shunday function yozing, uni number parametri bolsin va 0 dan berilgan parametrgacha bolgan oraliqdagi faqat toq sonlar nechtaligini return qilsin
 // MASALAN: sumOdds(9) return 4; sumOdds(11) return 5;
 
-function sumOdds(arr: number) {
-  let count: number = 0;
-  for (let i = 1; i < arr; i += 2) {
-    count++;
-  }
-  return count;
-}
+// function sumOdds(arr: number) {
+//   let count: number = 0;
+//   for (let i = 1; i < arr; i += 2) {
+//     count++;
+//   }
+//   return count;
+// }
 
-const result = sumOdds(11);
-console.log(result);
+// const result = sumOdds(11);
+// console.log(result);
 
 // T-TASK:
 
