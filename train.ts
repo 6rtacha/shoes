@@ -1,22 +1,38 @@
+// W-TASK:
+
+// Shunday function yozing, uni array va number parametrlari bolsin. Function arrayni numberda berilgan
+// uzunlikda kesib bolaklarga ajratilgan array holatida qaytarsin
+// MASALAN: chunkArray([1,2,3,4,5,6,7,8,9,10], 3) return [[1,2,3], [4,5,6], [7,8,9], [10]]
+
+function chunkArray(arr: number[], num: number) {
+  const result: any = [];
+  for (let i = 0; i < arr.length; i += num) {
+    const result1 = arr.slice(i, i + num);
+    result.push(result1);
+  }
+  console.log(result);
+}
+chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+
 // V-TASK:
 
 // Shunday function yozing, uni string parametri bolsin va stringdagi harf va u harf necha marta takrorlangani sonidan tashkil topgan object qaytarsin.
 // MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
 
-function countChars(str: string) {
-  const strAr = str.split("");
-  let letterCount: any = {};
-  for (let i = 0; i < strAr.length; i++) {
-    if (letterCount[strAr[i]]) {
-      letterCount[strAr[i]]++;
-    } else {
-      letterCount[strAr[i]] = 1;
-    }
-  }
-  console.log(letterCount);
-}
+// function countChars(str: string) {
+//   const strAr = str.split("");
+//   let letterCount: any = {};
+//   for (let i = 0; i < strAr.length; i++) {
+//     if (letterCount[strAr[i]]) {
+//       letterCount[strAr[i]]++;
+//     } else {
+//       letterCount[strAr[i]] = 1;
+//     }
+//   }
+//   console.log(letterCount);
+// }
 
-countChars("hello");
+// countChars("hello");
 
 // U-TASK:
 
