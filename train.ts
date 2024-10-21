@@ -1,40 +1,56 @@
+// Y-TASK:
+
+// Shunday function yozing, uni 2 ta array parapetri bolsin. Function ikkala arrayda ham ishtirok etgan qiymatlarni bir arrayda qaytarsin
+// MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
+
+function findIntersection(arr: number[], arr1: number[]) {
+  const intNumber: number[] = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr1.length; j++) {
+      if (arr[i] == arr1[j]) {
+        intNumber.push(arr[i]);
+      }
+    }
+  }
+  return intNumber;
+}
+const result = findIntersection([1, 2, 3], [3, 2, 0]);
+console.log(result);
+
 // TASK X
 
 // Shunday function yozing, uni object va string parametrlari bo'lsin.
 // Bu function, birinchi object parametri tarkibida, kalit sifatida ikkinchi string parametri
 // necha marotaba takrorlanganlini sanab qaytarsin.
-
 // Eslatma => Nested object'lar ham sanalsin
-
 // MASALAN: countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model') return 2
-
 // Yuqoridagi misolda, birinchi argument object, ikkinchi argument 'model'.
 // Funktsiya, shu ikkinchi argument 'model', birinchi argument object
 // tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda
 
-function countOccurrences(obj: any, str: string) {
-  let count: number = 0;
-  for (let key in obj) {
-    if (key === str) {
-      count++;
-    }
+// function countOccurrences(obj: any, str: string) {
+//   let count: number = 0;
+//   for (let key in obj) {
+//     if (key === str) {
+//       count++;
+//     }
 
-    if (typeof obj[key] === "object" && obj[key] !== null) {
-      for (let nestedKey in obj[key]) {
-        if (nestedKey === str) {
-          count++;
-        }
-      }
-    }
-  }
-  return count;
-}
+//     if (typeof obj[key] === "object" && obj[key] !== null) {
+//       for (let nestedKey in obj[key]) {
+//         if (nestedKey === str) {
+//           count++;
+//         }
+//       }
+//     }
+//   }
+//   return count;
+// }
 
-const result = countOccurrences(
-  { model: "Bugatti", steer: { model: "HANKOOK", size: 30 } },
-  "model"
-);
-console.log(result);
+// const result = countOccurrences(
+//   { model: "Bugatti", steer: { model: "HANKOOK", size: 30 } },
+//   "model"
+// );
+// console.log(result);
 
 // W-TASK:
 
