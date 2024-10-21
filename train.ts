@@ -1,18 +1,56 @@
+// TASK X
+
+// Shunday function yozing, uni object va string parametrlari bo'lsin.
+// Bu function, birinchi object parametri tarkibida, kalit sifatida ikkinchi string parametri
+// necha marotaba takrorlanganlini sanab qaytarsin.
+
+// Eslatma => Nested object'lar ham sanalsin
+
+// MASALAN: countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model') return 2
+
+// Yuqoridagi misolda, birinchi argument object, ikkinchi argument 'model'.
+// Funktsiya, shu ikkinchi argument 'model', birinchi argument object
+// tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda
+
+function countOccurrences(obj: any, str: string) {
+  let count: number = 0;
+  for (let key in obj) {
+    if (key === str) {
+      count++;
+    }
+
+    if (typeof obj[key] === "object" && obj[key] !== null) {
+      for (let nestedKey in obj[key]) {
+        if (nestedKey === str) {
+          count++;
+        }
+      }
+    }
+  }
+  return count;
+}
+
+const result = countOccurrences(
+  { model: "Bugatti", steer: { model: "HANKOOK", size: 30 } },
+  "model"
+);
+console.log(result);
+
 // W-TASK:
 
 // Shunday function yozing, uni array va number parametrlari bolsin. Function arrayni numberda berilgan
 // uzunlikda kesib bolaklarga ajratilgan array holatida qaytarsin
 // MASALAN: chunkArray([1,2,3,4,5,6,7,8,9,10], 3) return [[1,2,3], [4,5,6], [7,8,9], [10]]
 
-function chunkArray(arr: number[], num: number) {
-  const result: any = [];
-  for (let i = 0; i < arr.length; i += num) {
-    const result1 = arr.slice(i, i + num);
-    result.push(result1);
-  }
-  console.log(result);
-}
-chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+// function chunkArray(arr: number[], num: number) {
+//   const result: any = [];
+//   for (let i = 0; i < arr.length; i += num) {
+//     const result1 = arr.slice(i, i + num);
+//     result.push(result1);
+//   }
+//   console.log(result);
+// }
+// chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
 
 // V-TASK:
 
