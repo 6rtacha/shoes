@@ -1,14 +1,33 @@
-// ZB-TASK:
+// TASK ZC
 
-// Shunday function yozing, uni 2 ta number parametri bolsin va berilgan sonlar orasidan random raqam return qilsin
-// MASALAN: randomBetween(30, 50) return 45
+// Selisy (°C) shkalasi bo'yicha raqam qabul qilib, uni
+// Ferenhayt (°F) shkalisaga o'zgaritib beradigan function yozing.
 
-function randomBetween(num: number, num1: number) {
-  let randomNumber = Math.floor(Math.random() * (num1 - num + 1)) + num;
-  return randomNumber;
+// MASALAN: celsiusToFahrenheit(0) return 32;
+// MASALAN: celsiusToFahrenheit(10) return 50;
+
+// Yuqoridagi misolda, 0°C, 32°F'ga teng.
+// Yoki 10 gradus Selsiy, 50 Farenhaytga teng.
+
+// °C va °F => Tempraturani o'lchashda ishlatiladigan o'lchov birligi.
+
+function celsiusToFahrenheit(num: number) {
+  return (num * 9) / 5 + 32;
 }
-const result = randomBetween(30, 50);
-console.log(result);
+const result = celsiusToFahrenheit(10);
+console.log(`${result}°F`);
+
+// // ZB-TASK:
+
+// // Shunday function yozing, uni 2 ta number parametri bolsin va berilgan sonlar orasidan random raqam return qilsin
+// // MASALAN: randomBetween(30, 50) return 45
+
+// function randomBetween(num: number, num1: number) {
+//   let randomNumber = Math.floor(Math.random() * (num1 - num + 1)) + num;
+//   return randomNumber;
+// }
+// const result = randomBetween(30, 50);
+// console.log(result);
 
 // ZA-TASK:
 
