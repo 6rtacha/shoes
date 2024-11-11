@@ -1,3 +1,23 @@
+// ZE-TASK:
+
+// Shunday function yozing, uni  string parametri bolsin.
+// String ichida takrorlangan harflarni olib tashlab qolganini qaytarsin
+// MASALAN: removeDuplicate('stringg') return 'string'
+
+function removeDuplicate(str: string) {
+  const strArray = str.split("");
+  for (let i = 0; i < strArray.length; i++) {
+    for (let j = i + 1; j < strArray.length; j++) {
+      if (strArray[i] == strArray[j]) {
+        strArray.splice(i, 1);
+      }
+    }
+  }
+  return strArray.join("");
+}
+const result = removeDuplicate("stringg");
+console.log(result);
+
 // TASK ZD
 
 // Shunday function yozing. Bu function o'ziga, parametr sifatida
@@ -12,12 +32,12 @@
 // Bizning function uchinchi berilgan '2' raqamini shu '3' bilan almashtirib,
 // yangilangan arrayni qaytarmoqda.
 
-function changeNumberInArray(num: number, arr: number[], num1: number) {
-  arr[num] = num1;
-  return arr;
-}
-const result = changeNumberInArray(1, [1, 3, 7, 2], 2);
-console.log(result);
+// function changeNumberInArray(num: number, arr: number[], num1: number) {
+//   arr[num] = num1;
+//   return arr;
+// }
+// const result = changeNumberInArray(1, [1, 3, 7, 2], 2);
+// console.log(result);
 
 // TASK ZC
 
