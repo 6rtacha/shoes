@@ -1,22 +1,36 @@
+// TASK ZG
+
+// String sifatida berilgan string parametrni
+// snake case'ga o'tkazib beradigan function yozing.
+
+// MASALAN: convertToSnakeCase('name should be a string')
+// return 'name_should_be_a_string'
+
+function convertToSnakeCase(str: string) {
+  return str.split(" ").join("_");
+}
+const result = convertToSnakeCase("name should be a string");
+console.log(result);
+
 // ZE-TASK:
 
 // Shunday function yozing, uni  string parametri bolsin.
 // String ichida takrorlangan harflarni olib tashlab qolganini qaytarsin
 // MASALAN: removeDuplicate('stringg') return 'string'
 
-function removeDuplicate(str: string) {
-  const strArray = str.split("");
-  for (let i = 0; i < strArray.length; i++) {
-    for (let j = i + 1; j < strArray.length; j++) {
-      if (strArray[i] == strArray[j]) {
-        strArray.splice(i, 1);
-      }
-    }
-  }
-  return strArray.join("");
-}
-const result = removeDuplicate("stringg");
-console.log(result);
+// function removeDuplicate(str: string) {
+//   const strArray = str.split("");
+//   for (let i = 0; i < strArray.length; i++) {
+//     for (let j = i + 1; j < strArray.length; j++) {
+//       if (strArray[i] == strArray[j]) {
+//         strArray.splice(i, 1);
+//       }
+//     }
+//   }
+//   return strArray.join("");
+// }
+// const result = removeDuplicate("stringg");
+// console.log(result);
 
 // TASK ZD
 
