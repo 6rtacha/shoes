@@ -1,3 +1,23 @@
+// ZH-TASK:
+
+// Shunday function yozing, u berilgan array parametrni ichidagi eng katta raqamgacha tushib qolgan
+// raqamlarni bir arrayda qaytarsin.
+// MASALAN: findDisappearedNumbers([1, 3, 4, 7]) return [2, 5, 6]
+
+function findDisappearedNumbers(arr: number[]) {
+  const result1: number[] = [];
+  const lastNumber: any = arr.slice(-1);
+  for (let i = 1; i < lastNumber; i++) {
+    if (!arr.includes(i)) {
+      result1.push(i);
+    }
+  }
+
+  return result1;
+}
+const result = findDisappearedNumbers([1, 3, 4, 7]);
+console.log(result);
+
 // TASK ZG
 
 // String sifatida berilgan string parametrni
@@ -6,11 +26,11 @@
 // MASALAN: convertToSnakeCase('name should be a string')
 // return 'name_should_be_a_string'
 
-function convertToSnakeCase(str: string) {
-  return str.split(" ").join("_");
-}
-const result = convertToSnakeCase("name should be a string");
-console.log(result);
+// function convertToSnakeCase(str: string) {
+//   return str.split(" ").join("_");
+// }
+// const result = convertToSnakeCase("name should be a string");
+// console.log(result);
 
 // ZE-TASK:
 
