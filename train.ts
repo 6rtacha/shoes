@@ -1,17 +1,38 @@
+// TASK ZK:
+
+// Shunday function yozing, bu function har bir soniyada bir marotaba
+// console'ga 1'dan 5'gacha bo'lgan raqamlarni chop etsin va
+// 5 soniyadan so'ng function o'z ishini to'xtatsin
+
+// MASALAN: printNumbers();
+
+function printNumbers() {
+  const numbers: string = "1, 2, 3, 4, 5";
+  let count: number = 0;
+  let countToFive = setInterval(() => {
+    console.log(numbers);
+    count++;
+    if (count > 5) {
+      clearInterval(countToFive);
+    }
+  }, 1000);
+}
+printNumbers();
+
 // ZJ-TASK:
 
 // Shunday function yozing, u berilgan arrayni ichidagi numberlarni qiymatini hisoblab qaytarsin.
 // MASALAN: reduceNestedArray([1, [1, 2, [4]]]) return 8
 
-function reduceNestedArray(arr: any[]) {
-  const arrFlat = arr.flat(Infinity);
-  const result1 = arrFlat.reduce((total, ele) => {
-    return total + ele;
-  }, 0);
-  return result1;
-}
-const result = reduceNestedArray([1, [1, 2, [4]]]);
-console.log(result);
+// function reduceNestedArray(arr: any[]) {
+//   const arrFlat = arr.flat(Infinity);
+//   const result1 = arrFlat.reduce((total, ele) => {
+//     return total + ele;
+//   }, 0);
+//   return result1;
+// }
+// const result = reduceNestedArray([1, [1, 2, [4]]]);
+// console.log(result);
 
 // ZI-TASK:
 
