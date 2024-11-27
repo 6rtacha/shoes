@@ -1,3 +1,15 @@
+// ZL-TASK:
+
+// Shunday function yozing, u parametrda berilgan stringni kebab casega otkazib qaytarsin. Bosh harflarni kichik harflarga ham otkazsin.
+// MASALAN: stringToKebab(“I love Kebab”) return “i-love-kebab”
+
+function stringToKebab(str: string) {
+  return str.toLowerCase().split(" ").join("-");
+  // const kebabCase = str.replace(/([a-z0-9A-Z]) ([a-z0-9A-Z])/g, "$1-$2").toLowerCase();
+}
+const result = stringToKebab("I love Kebab");
+console.log(result);
+
 // TASK ZK:
 
 // Shunday function yozing, bu function har bir soniyada bir marotaba
@@ -6,18 +18,18 @@
 
 // MASALAN: printNumbers();
 
-function printNumbers() {
-  const numbers: string = "1, 2, 3, 4, 5";
-  let count: number = 0;
-  let countToFive = setInterval(() => {
-    console.log(numbers);
-    count++;
-    if (count > 5) {
-      clearInterval(countToFive);
-    }
-  }, 1000);
-}
-printNumbers();
+// function printNumbers() {
+//   const numbers: string = "1, 2, 3, 4, 5";
+//   let count: number = 0;
+//   let countToFive = setInterval(() => {
+//     console.log(numbers);
+//     count++;
+//     if (count > 5) {
+//       clearInterval(countToFive);
+//     }
+//   }, 1000);
+// }
+// printNumbers();
 
 // ZJ-TASK:
 
