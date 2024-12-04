@@ -1,14 +1,31 @@
+// ZM-TASK:
+
+// Shunday function yozing, uni array va number parametri bolsin. Ikkinchi parametrda berilgan raqamli
+// indexgacha arrayni orqasiga ogirib qaytarsin.
+// MASALAN: rotateArray([1, 2, 3, 4, 5, 6], 3) return [5, 6, 1, 2, 3, 4]
+
+function rotateArray(arr: number[], num: number) {
+  const index: number = arr.length - num - 1;
+  const arr1 = arr.splice(num + 1, index);
+  const result1 = arr1.concat(arr);
+
+  return result1;
+}
+
+const result = rotateArray([1, 2, 3, 4, 5, 6], 3);
+console.log(result);
+
 // ZL-TASK:
 
 // Shunday function yozing, u parametrda berilgan stringni kebab casega otkazib qaytarsin. Bosh harflarni kichik harflarga ham otkazsin.
 // MASALAN: stringToKebab(“I love Kebab”) return “i-love-kebab”
 
-function stringToKebab(str: string) {
-  return str.toLowerCase().split(" ").join("-");
-  // const kebabCase = str.replace(/([a-z0-9A-Z]) ([a-z0-9A-Z])/g, "$1-$2").toLowerCase();
-}
-const result = stringToKebab("I love Kebab");
-console.log(result);
+// function stringToKebab(str: string) {
+//   return str.toLowerCase().split(" ").join("-");
+//   // const kebabCase = str.replace(/([a-z0-9A-Z]) ([a-z0-9A-Z])/g, "$1-$2").toLowerCase();
+// }
+// const result = stringToKebab("I love Kebab");
+// console.log(result);
 
 // TASK ZK:
 
