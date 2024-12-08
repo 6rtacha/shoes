@@ -1,23 +1,45 @@
+// ZO-TASK:
+
+// Shunday function yozing, u parametridagi string ichidagi raqam va sonlarni sonini sanasin.
+// MASALAN: countNumberAndLetters(“string152%\¥”) return {number:3, letter:6}
+
+function countNumberAndLetters(str: string) {
+  let number: number = 0;
+  let letter: number = 0;
+
+  const arr = str.replace(/[^a-zA-Z0-9]/g, "").split("");
+  for (let i = 0; i < arr.length; i++) {
+    if (!isNaN(Number(arr[i]))) {
+      number++;
+    } else if (typeof arr[i] == "string") {
+      letter++;
+    }
+  }
+  return { number: number, letter: letter };
+}
+const result = countNumberAndLetters("string152%¥");
+console.log(result);
+
 // ZN-TASK:
 
 // Shunday function yozing, u parametrdagi string ichidagi qavslar miqdori balansda ekanligini aniqlasin.
 // Ya'ni ochish("(") va yopish(")") qavslar soni bir xil bolishi kerak.
 // MASALAN: areParenthesesBalanced("string()ichida(qavslar)soni()balansda") return true
 
-function areParenthesesBalanced(str: string) {
-  let open: string[] = [];
-  let close: string[] = [];
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === "(") {
-      open.push(str[i]);
-    } else if (str[i] === ")") {
-      close.push(str[i]);
-    }
-  }
-  return open.length == close.length ? true : false;
-}
-const result = areParenthesesBalanced("string()ichida(qavslar)soni()balansda");
-console.log(result);
+// function areParenthesesBalanced(str: string) {
+//   let open: string[] = [];
+//   let close: string[] = [];
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === "(") {
+//       open.push(str[i]);
+//     } else if (str[i] === ")") {
+//       close.push(str[i]);
+//     }
+//   }
+//   return open.length == close.length ? true : false;
+// }
+// const result = areParenthesesBalanced("string()ichida(qavslar)soni()balansda");
+// console.log(result);
 
 // ZM-TASK:
 
