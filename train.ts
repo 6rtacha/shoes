@@ -1,24 +1,43 @@
+// ZP-TASK:
+
+// Shunday function yozing, u parametridagi array ichida 2 marta qaytarilgan sonlarni alohida araryda qaytarsin.
+// MASALAN: findDuplicates([1,2,3,4,5,4,3,4]) return [3, 4]
+
+function findDuplicates(arr: number[]) {
+  const duplicates: number[] = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] == arr[j] && !duplicates.includes(arr[i])) {
+        duplicates.push(arr[i]);
+      }
+    }
+  }
+  return duplicates;
+}
+const result = findDuplicates([1, 2, 3, 4, 5, 4, 3, 4]);
+console.log(result);
+
 // ZO-TASK:
 
 // Shunday function yozing, u parametridagi string ichidagi raqam va sonlarni sonini sanasin.
 // MASALAN: countNumberAndLetters(“string152%\¥”) return {number:3, letter:6}
 
-function countNumberAndLetters(str: string) {
-  let number: number = 0;
-  let letter: number = 0;
+// function countNumberAndLetters(str: string) {
+//   let number: number = 0;
+//   let letter: number = 0;
 
-  const arr = str.replace(/[^a-zA-Z0-9]/g, "").split("");
-  for (let i = 0; i < arr.length; i++) {
-    if (!isNaN(Number(arr[i]))) {
-      number++;
-    } else if (typeof arr[i] == "string") {
-      letter++;
-    }
-  }
-  return { number: number, letter: letter };
-}
-const result = countNumberAndLetters("string152%¥");
-console.log(result);
+//   const arr = str.replace(/[^a-zA-Z0-9]/g, "").split("");
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!isNaN(Number(arr[i]))) {
+//       number++;
+//     } else if (typeof arr[i] == "string") {
+//       letter++;
+//     }
+//   }
+//   return { number: number, letter: letter };
+// }
+// const result = countNumberAndLetters("string152%¥");
+// console.log(result);
 
 // ZN-TASK:
 
