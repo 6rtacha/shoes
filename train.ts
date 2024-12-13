@@ -1,21 +1,40 @@
+// ZQ-TASK:
+
+// Shunday function yozing, u parametridagi arrayni ichidagi 1 marta kelgan elemnetni qaytarsin.
+// MASALAN: singleNumber([4, 2, 1, 2, 1]) return 4
+
+function singleNumber(arr: number[]) {
+  let single: number = 0;
+  const arr1 = arr.sort();
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[i + 1]) {
+      single = arr[i];
+    }
+  }
+  return single;
+}
+const result = singleNumber([4, 2, 1, 2, 1]);
+console.log(result);
+
 // ZP-TASK:
 
 // Shunday function yozing, u parametridagi array ichida 2 marta qaytarilgan sonlarni alohida araryda qaytarsin.
 // MASALAN: findDuplicates([1,2,3,4,5,4,3,4]) return [3, 4]
 
-function findDuplicates(arr: number[]) {
-  const duplicates: number[] = [];
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] == arr[j] && !duplicates.includes(arr[i])) {
-        duplicates.push(arr[i]);
-      }
-    }
-  }
-  return duplicates;
-}
-const result = findDuplicates([1, 2, 3, 4, 5, 4, 3, 4]);
-console.log(result);
+// function findDuplicates(arr: number[]) {
+//   const duplicates: number[] = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] == arr[j] && !duplicates.includes(arr[i])) {
+//         duplicates.push(arr[i]);
+//       }
+//     }
+//   }
+//   return duplicates;
+// }
+// const result = findDuplicates([1, 2, 3, 4, 5, 4, 3, 4]);
+// console.log(result);
 
 // ZO-TASK:
 
