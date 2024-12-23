@@ -1,21 +1,40 @@
+// ZT-TASK:
+
+// Shunday function yozing, u parametridagi array ichidagi barcha nollarni
+//  array oxiriga qoyib qolgan raqamlar ketma-ketligini saqlasin.
+// MASALAN: moveZeroes([0, 1, 0, 3, 12]) return [1, 3, 12, 0, 0]
+
+function moveZeroes(arr: number[]) {
+  let number: number = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 0) {
+      number = arr[i];
+      arr.splice(i, 1);
+      arr.push(number);
+    }
+  }
+  return arr;
+}
+console.log(moveZeroes([0, 1, 0, 3, 12]));
+
 // ZS-TASK:
 
 // Shunday function yozing, u parametridagi array ichida takrorlanmagan raqamlar yig'indisini qaytarsin.
 // MASALAN: sumOfUnique([1,2,3,2]) return 4
 
-function sumOfUnique(arr: number[]) {
-  let result: number = 0;
+// function sumOfUnique(arr: number[]) {
+//   let result: number = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i])) {
-      continue;
-    }
-    result += arr[i];
-  }
-  return result;
-}
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i])) {
+//       continue;
+//     }
+//     result += arr[i];
+//   }
+//   return result;
+// }
 
-console.log(sumOfUnique([1, 2, 3, 2]));
+// console.log(sumOfUnique([1, 2, 3, 2]));
 
 // ZR-TASK:
 
