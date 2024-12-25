@@ -1,21 +1,54 @@
+// ZU-TASK:
+
+// Shunday function yozing, uni 2 ta parametri bo'lsin, biri array va biri string.
+// Function arrayda berilgan malumotlarni 2-parametrdagi string qiymati asosida guruhlab qaytarsin.
+// MASALAN:
+// const data = [
+//   { name: 'Alice', age: 25, city: 'London' },
+//   { name: 'Bob',   age: 30, city: 'New York' },
+//   { name: 'Charlie', age: 25, city: 'London' },
+// ];
+// console.log(groupBy(data, 'city')); // { 'London': [ { name: 'Alice', age: 25, city: 'London' },
+// { name: 'Charlie', age: 25, city: 'London' } ],
+// 'New York': [ { name: 'Bob', age: 30, city: 'New York' } ] }
+const data = [
+  { name: "Alice", age: 25, city: "London" },
+  { name: "Bob", age: 30, city: "New York" },
+  { name: "Charlie", age: 25, city: "London" },
+];
+function groupBy(arr: any[], str: string) {
+  const obj: any = {};
+
+  for (let value of arr) {
+    const key = value[str];
+    if (!obj[key]) {
+      obj[key] = [];
+    }
+    obj[key].push(value);
+  }
+
+  return obj;
+}
+console.log(groupBy(data, "city"));
+
 // ZT-TASK:
 
 // Shunday function yozing, u parametridagi array ichidagi barcha nollarni
 //  array oxiriga qoyib qolgan raqamlar ketma-ketligini saqlasin.
 // MASALAN: moveZeroes([0, 1, 0, 3, 12]) return [1, 3, 12, 0, 0]
 
-function moveZeroes(arr: number[]) {
-  let number: number = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == 0) {
-      number = arr[i];
-      arr.splice(i, 1);
-      arr.push(number);
-    }
-  }
-  return arr;
-}
-console.log(moveZeroes([0, 1, 0, 3, 12]));
+// function moveZeroes(arr: number[]) {
+//   let number: number = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == 0) {
+//       number = arr[i];
+//       arr.splice(i, 1);
+//       arr.push(number);
+//     }
+//   }
+//   return arr;
+// }
+// console.log(moveZeroes([0, 1, 0, 3, 12]));
 
 // ZS-TASK:
 
