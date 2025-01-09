@@ -1,66 +1,73 @@
-import mongoose, {Schema} from "mongoose";
-import { MemberStatus, MemberType } from "../libs/enums/member.enum";
-import { ProductCollection, ProductSize, ProductStatus, ProductVolume } from "../libs/enums/product.enum";
+import mongoose, { Schema } from "mongoose";
+import {
+  ProductFor,
+  ProductMaterial,
+  ProductSeason,
+  ProductStatus,
+} from "../libs/enums/product.enum";
 
 const productSchema = new Schema(
-    {
-        productStatus : {
-            type: String,
-            enum: ProductStatus,
-            default: ProductStatus.PAUSE
-        },
-
-        productCollection : {
-            type: String,
-            enum: ProductCollection,
-            required: true,
-        },
-
-        productName : {
-            type: String,
-            required: true,
-        },
-        productPrice : {
-            type: Number,
-            required: true,
-        },
-
-        productLeftCount : {
-            type: Number,
-            required: true,
-        },
-
-        productSize : {
-            type: String,
-            enum: ProductSize,
-            default: ProductSize.NORMAL
-        },
-
-        productVolume : {
-            type: Number,
-            enum: ProductVolume,
-            default: ProductVolume.ONE,
-        },
-
-        productDesc : {
-            type: String,
-        },
-
-        productImages : {
-            type: [String],
-            default: [],
-        },
-
-        productViews : {
-            type: Number,
-            default: 0,
-        },
+  {
+    productStatus: {
+      type: String,
+      enum: ProductStatus,
+      default: ProductStatus.ACTIVE,
     },
-    { timestamps: true }  // updatedat, createdat
+
+    productName: {
+      type: String,
+      required: true,
+    },
+
+    productPrice: {
+      type: Number,
+      required: true,
+    },
+
+    productSize: {
+      type: Number,
+      required: true,
+    },
+
+    productMaterial: {
+      type: String,
+      enum: ProductMaterial,
+      required: true,
+    },
+
+    productFor: {
+      type: Number,
+      enum: ProductFor,
+      default: ProductFor.UNI,
+    },
+
+    productSeason: {
+      type: Number,
+      enum: ProductSeason,
+      default: ProductSeason.AUTUMN,
+    },
+
+    productDesc: {
+      type: String,
+    },
+
+    productImages: {
+      type: [String],
+      default: [],
+    },
+
+    productLeftCount: {
+      type: Number,
+      required: true,
+    },
+
+    productViews: {
+      type: Number,
+      default: 0,
+    },
+  },
+  { timestamps: true } // updatedat, createdat
 );
 
-productSchema.index(
-    { productName: 1, productSize: 1, productVolume: 1},
-    { unique: true}
-);
-export default mongoose.model('Product', productSchema);
+productSchema.index({ productName: 1, productSize: 1 }, { unique: true });
+export default mongoose.model("Product", productSchema);
