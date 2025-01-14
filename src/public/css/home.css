@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(-45deg, #110303f0, #dd6d04, #011c1afc, #7a6868);
+  background: linear-gradient(-45deg, #0e0505f0, #4e4d4d, #8ea5a5fc, #0e0a0a);
 }
 
 .home-container a {
@@ -16,6 +16,8 @@
 
 .home-container .nav-item a {
   color: #e3c08d;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
 }
 
 .home-container .nav-item a.disabled {

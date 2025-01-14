@@ -15,8 +15,7 @@ export enum ProductStatus {
 export enum ProductSeason {
   WINTER = "WINTER",
   SUMMER = "SUMMER",
-  AUTUMN = "AUTUMN",
-  SPRING = "SPRING",
+  ALLSEASON = "ALLSEASON",
 }
 
 export enum ProductMaterial {

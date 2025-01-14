@@ -1,5 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import {
+  ProductCollection,
   ProductFor,
   ProductMaterial,
   ProductSeason,
@@ -12,6 +13,12 @@ const productSchema = new Schema(
       type: String,
       enum: ProductStatus,
       default: ProductStatus.ACTIVE,
+    },
+
+    productCollection: {
+      type: String,
+      enum: ProductCollection,
+      required: true,
     },
 
     productName: {
@@ -36,15 +43,15 @@ const productSchema = new Schema(
     },
 
     productFor: {
-      type: Number,
+      type: String,
       enum: ProductFor,
       default: ProductFor.UNI,
     },
 
     productSeason: {
-      type: Number,
+      type: String,
       enum: ProductSeason,
-      default: ProductSeason.AUTUMN,
+      default: ProductSeason.ALLSEASON,
     },
 
     productDesc: {

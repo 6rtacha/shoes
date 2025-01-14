@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #0e0505f0, #4e4d4d, #8ea5a5fc, #0e0a0a);
   animation: gradient 15s ease infinite;
   -webkit-animation: gradient 15s ease infinite;
   background-size: 200% 200%;
@@ -37,7 +37,7 @@
 }
 
 .login-container .login-top span {
-  font-family: "Poppins";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -46,7 +46,7 @@
 
 .login-container .login-top p {
   margin-top: 15px;
-  font-family: "Poppins";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -54,7 +54,7 @@
 }
 
 .login-container .login-top div {
-  font-family: "Poppins";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -80,7 +80,7 @@
 
 .login-container .login-input-container label {
   margin-bottom: 0px;
-  font-family: "Poppins";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -106,9 +106,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #33a0ff;
+  background: #91a9bf;
   border-radius: 10px;
-  font-family: "Nunito";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
