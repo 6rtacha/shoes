@@ -18,10 +18,10 @@ const authService = new AuthService();
 const memberController: T = {};
 // REACT
 
-memberController.getRestaurant = async (req: Request, res: Response) => {
+memberController.getAdmin = async (req: Request, res: Response) => {
   try {
     console.log("getRestaurant");
-    const result = await memberService.getRestaurant();
+    const result = await memberService.getAdmin();
 
     res.status(HttpCode.OK).json(result);
   } catch (err) {

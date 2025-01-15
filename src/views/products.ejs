@@ -37,10 +37,13 @@
                 <th scope="col">T/r</th>
                 <th scope="col">Product Name</th>
                 <th scope="col">Product Type</th>
-                <th scope="col">Product Volume</th>
+                <th scope="col">Product Size</th>
                 <th scope="col">Product Price</th>
                 <th scope="col">Product Left Count</th>
+                <th scope="col">Product Season</th>
+                <th scope="col">Product For</th>
                 <th scope="col">Status</th>
+                
               </tr>
             </thead>
             <!--  LOOP PRODUCTS: START  -->
@@ -49,9 +52,34 @@
               <td><%= key + 1 %></td>
               <td><%= value.productName %></td>
               <td><%= value.productCollection %></td>
-              <td><%= value.productCollection === 'DRINK' ? value.productVolume : value.productSize %></td>
+              <td>
+                <select class="spec-select new-product-size" id="<%= value._id %>">
+                  <option value="250" <%= value.productSize === 250 ? 'selected': '' %> >250</option>
+                  <option value="255" <%= value.productSize === 255 ? 'selected': '' %> >255</option>
+                  <option value="260" <%= value.productSize === 260 ? 'selected': '' %> >260</option>
+                  <option value="265" <%= value.productSize === 265 ? 'selected': '' %> >265</option>
+                  <option value="270" <%= value.productSize === 270 ? 'selected': '' %> >270</option>
+                  <option value="275" <%= value.productSize === 275 ? 'selected': '' %> >275</option>
+                  <option value="280" <%= value.productSize === 280 ? 'selected': '' %> >280</option>
+                </select>
+              </td>
               <td><%= value.productPrice %></td>
               <td><%= value.productLeftCount %></td>
+              <td>
+                <select class="spec-select new-product-season" id="<%= value._id %>">
+                  <option value="WINTER" <%= value.productSeason === 'WINTER' ? 'selected': '' %> >WINTER</option>
+                  <option value="SUMMER" <%= value.productSeason === 'SUMMER' ? 'selected': '' %> >SUMMER</option>
+                  <option value="ALLSEASON"<%= value.productSeason === 'ALLSEASON' ? 'selected': '' %> >ALL SEASON</option>
+                </select>
+              </td>
+              <td>
+                <select class="spec-select new-product-for" id="<%= value._id %>">
+                  <option value="MALE" <%= value.productFor === 'MALE' ? 'selected': '' %> >Male</option>
+                  <option value="FEMALE" <%= value.productFor === 'FEMALE' ? 'selected': '' %> >Female</option>
+                  <option value="UNI"<%= value.productFor === 'UNI' ? 'selected': '' %> >Unisex</option>
+                  <option value="KIDS"<%= value.productFor === 'KIDS' ? 'selected': '' %> >Kids</option>
+                </select>
+              </td>
               <td>
                 <select class="spec-select new-product-status" id="<%= value._id %>">
                   <option value="PAUSE" <%= value.productStatus === 'PAUSE' ? 'selected': '' %> >PAUSE</option>
@@ -68,7 +96,7 @@
             class="long-input"
             style="align-items: flex-end; margin-bottom: 25px"
           >
-            <button class="btn btn-primary" id="process-btn">
+            <button class="btn btn-secondary" id="process-btn">
               New Product
             </button>
           </div>
@@ -124,21 +152,22 @@
             <div class="half-input">
               <label>Product Type</label>
               <select class="product-collection" name="productCollection">
-                <option value="DISH" selected>Dish</option>
-                <option value="SALAD">Salad</option>
-                <option value="DESSERT">Dessert</option>
-                <option value="DRINK">Drink</option>
-                <option value="OTHER">Other</option>
+                <option value="SPORT" selected>Sport</option>
+                <option value="CASUAL">Casual</option>
+                <option value="CLASSIC">Classic</option>
               </select>
             </div>
 
             <div class="half-input" id="product-collection">
-              <label>Dish Volume</label>
+              <label>Product Size</label>
               <select class="product-size" name="productSize">
-                <option value="SMALL">Small</option>
-                <option value="NORMAL" selected>Normal</option>
-                <option value="LARGE">Large</option>
-                <option value="SET">Set</option>
+                <option value="250">250</option>
+                <option value="255">255</option>
+                <option value="260">260</option>
+                <option value="265">265</option>
+                <option value="270">270</option>
+                <option value="275" selected>275</option>
+                <option value="280">280</option>
               </select>
             </div>
 
@@ -217,8 +246,8 @@
           </div>
 
           <div class="operation-buttons">
-            <button class="btn btn-danger" id="cancel-btn">Cancel</button>
-            <button type="submit" class="btn btn-primary" id="create-btn">
+            <button class="btn btn-secondary" id="cancel-btn">Cancel</button>
+            <button type="submit" class="btn btn-secondary" id="create-btn">
               Create
             </button>
           </div>

@@ -7,7 +7,7 @@ import orderController from "./controllers/order.controller";
 
 /** Member */
 router
-  .get("/member/restaurant", memberController.getRestaurant)
+  .get("/member/restaurant", memberController.getAdmin)
   .post("/member/login", memberController.login)
   .post("/member/signup", memberController.signup)
   .post("/member/logout", memberController.verifyAuth, memberController.logout)

@@ -2,7 +2,6 @@ import mongoose, { Schema } from "mongoose";
 import {
   ProductCollection,
   ProductFor,
-  ProductMaterial,
   ProductSeason,
   ProductStatus,
 } from "../libs/enums/product.enum";
@@ -33,12 +32,6 @@ const productSchema = new Schema(
 
     productSize: {
       type: Number,
-      required: true,
-    },
-
-    productMaterial: {
-      type: String,
-      enum: ProductMaterial,
       required: true,
     },
 

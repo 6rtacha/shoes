@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(-45deg, #110303bf, #e37813, #011c1aba, #968383);
+  background-color: #606468;
 }
 
 .products-container a {
@@ -15,7 +15,8 @@
 }
 
 .products-container .nav-item a {
-  color: #e3c08d;
+  color: #f7f5f2;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .products-container .nav-item a.disabled {
@@ -60,6 +61,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  color: #f6f0f0;
 }
 
 .products-container .board .dish-container {
@@ -80,6 +83,7 @@
   font-size: 30px;
   line-height: 25px;
   color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .products-container .long-input {
@@ -110,7 +114,7 @@
   background: #f7f7f7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  font-family: "GT Walsheim Pro";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -128,7 +132,7 @@
   background: #f7f7f7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  font-family: "GT Walsheim Pro";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -171,12 +175,16 @@
   background: #f7f7f7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  font-family: "GT Walsheim Pro";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 26px;
   color: #4f547b;
+}
+
+.products-container .long-input label {
+  font-family: "Courier New", Courier, monospace;
 }
 
 .products-container .dish-container .half-input-frame {
@@ -198,12 +206,20 @@
 }
 
 .products-container .half-input label {
-  font-family: "Source Serif Pro";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 25px;
   color: #ffffff;
+}
+
+.products-container .half-input-frame .half-input .product-collection {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.products-container .half-input-frame .half-input .product-size {
+  font-family: "Courier New", Courier, monospace;
 }
 
 .products-container .half-input input {
@@ -256,7 +272,7 @@
 
 .products-container .img-frame label {
   margin-top: 30px;
-  font-family: "Source Serif Pro";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -292,7 +308,7 @@
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 8px;
-  font-family: "GT Walsheim Pro";
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;

@@ -18,12 +18,6 @@ export enum ProductSeason {
   ALLSEASON = "ALLSEASON",
 }
 
-export enum ProductMaterial {
-  LEATHER = "LEATHER",
-  RUBBER = "RUBBER",
-  TEXTILES = "TEXTILES",
-}
-
 export enum ProductCollection {
   SPORT = "SPORT",
   CLASSIC = "CLASSIC",
