@@ -3,6 +3,7 @@ import {
   ProductCollection,
   ProductFor,
   ProductSeason,
+  ProductSize,
   ProductStatus,
 } from "../enums/product.enum";
 
@@ -12,7 +13,7 @@ export interface Product {
   productCollection: ProductCollection;
   productName: string;
   productPrice: number;
-  productSize: number;
+  productSize: ProductSize;
   productFor: ProductFor;
   productSeason: ProductSeason;
   productDesc?: string;
@@ -36,7 +37,7 @@ export interface ProductInput {
   productCollection: ProductCollection;
   productName: string;
   productPrice: number;
-  productSize: number;
+  productSize: ProductSize;
   productFor?: ProductFor;
   productSeason?: ProductSeason;
   productDesc?: string;
@@ -52,7 +53,7 @@ export interface ProductUpdateInput {
   productName?: string;
   productPrice?: number;
   productLeftCount?: number;
-  productSize?: number;
+  productSize?: ProductSize;
   productFor?: ProductFor;
   productSeason?: ProductSeason;
   productDesc?: string;

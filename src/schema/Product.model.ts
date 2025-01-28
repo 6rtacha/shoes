@@ -3,6 +3,7 @@ import {
   ProductCollection,
   ProductFor,
   ProductSeason,
+  ProductSize,
   ProductStatus,
 } from "../libs/enums/product.enum";
 
@@ -31,8 +32,9 @@ const productSchema = new Schema(
     },
 
     productSize: {
-      type: Number,
-      required: true,
+      type: String,
+      enum: ProductSize,
+      default: ProductSize.SIZE250,
     },
 
     productFor: {

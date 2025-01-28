@@ -54,13 +54,14 @@
               <td><%= value.productCollection %></td>
               <td>
                 <select class="spec-select new-product-size" id="<%= value._id %>">
-                  <option value="250" <%= value.productSize === 250 ? 'selected': '' %> >250</option>
-                  <option value="255" <%= value.productSize === 255 ? 'selected': '' %> >255</option>
-                  <option value="260" <%= value.productSize === 260 ? 'selected': '' %> >260</option>
-                  <option value="265" <%= value.productSize === 265 ? 'selected': '' %> >265</option>
-                  <option value="270" <%= value.productSize === 270 ? 'selected': '' %> >270</option>
-                  <option value="275" <%= value.productSize === 275 ? 'selected': '' %> >275</option>
-                  <option value="280" <%= value.productSize === 280 ? 'selected': '' %> >280</option>
+                  <option value="ALL" <%= value.productSize === "ALL" ? 'selected': '' %> >All</option>
+                  <option value="SIZE250" <%= value.productSize === "SIZE250" ? 'selected': '' %> >250</option>
+                  <option value="SIZE255" <%= value.productSize === "SIZE255" ? 'selected': '' %> >255</option>
+                  <option value="SIZE260" <%= value.productSize === "SIZE260" ? 'selected': '' %> >260</option>
+                  <option value="SIZE265" <%= value.productSize === "SIZE265" ? 'selected': '' %> >265</option>
+                  <option value="SIZE270" <%= value.productSize === "SIZE270" ? 'selected': '' %> >270</option>
+                  <option value="SIZE275" <%= value.productSize === "SIZE275" ? 'selected': '' %> >275</option>
+                  <option value="SIZE280" <%= value.productSize === "SIZE280" ? 'selected': '' %> >280</option>
                 </select>
               </td>
               <td><%= value.productPrice %></td>
