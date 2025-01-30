@@ -34,7 +34,7 @@ const productSchema = new Schema(
     productSize: {
       type: String,
       enum: ProductSize,
-      default: ProductSize.SIZE250,
+      default: ProductSize.ALL,
     },
 
     productFor: {

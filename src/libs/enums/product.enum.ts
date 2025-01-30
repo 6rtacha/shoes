@@ -15,13 +15,15 @@ export enum ProductStatus {
 export enum ProductSeason {
   WINTER = "WINTER",
   SUMMER = "SUMMER",
-  ALLSEASON = "ALLSEASON",
+  ALLSEASON = "ALL SEASON",
 }
 
 export enum ProductCollection {
   SPORT = "SPORT",
   CLASSIC = "CLASSIC",
   CASUAL = "CASUAL",
+  INDOOR = "INDOOR",
+  SLIPPERS = "SLIPPERS",
 }
 
 export enum ProductSize {
