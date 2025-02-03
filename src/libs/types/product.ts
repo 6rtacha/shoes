@@ -25,7 +25,9 @@ export interface Product {
 }
 
 export interface ProductInquiry {
-  productCollection: any;
+  productFor?: any;
+  productSeason?: any;
+  productCollection?: any;
   order: string;
   page: number;
   limit: number;

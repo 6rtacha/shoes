@@ -29,6 +29,8 @@ class ProductService {
 
     if (inquiry.productCollection)
       match.productCollection = inquiry.productCollection;
+    if (inquiry.productFor) match.productFor = inquiry.productFor;
+    if (inquiry.productSeason) match.productSeason = inquiry.productSeason;
     if (inquiry.search) {
       match.productName = { $regex: new RegExp(inquiry.search, "i") };
     }
